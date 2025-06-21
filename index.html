@@ -3,37 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekt-Dokumentation</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/theme.css"> </head>
-<body>
+    <title>Projekt-Dokumentation: KI, Gaming & Mehr</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="light-mode">
     <header>
         <nav id="main-nav">
             <div class="logo">
-                <a href="/">Projekt XYZ</a>
+                <a href="#home">🚀 Projekt XYZ</a>
             </div>
-            <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#development">Entwicklung</a></li>
-                <li><a href="#gaming">Gaming Center</a></li>
-                <li><a href="#about">Über Uns</a></li>
+            <ul id="nav-links">
+                <li><a href="#features">✨ Features</a></li>
+                <li><a href="#development">⚙️ Entwicklung</a></li>
+                <li><a href="#gaming">🎮 Gaming Center</a></li>
+                <li><a href="#about">ℹ️ Über Uns</a></li>
             </ul>
-            <button id="theme-toggle">☀️/🌙</button>
+            <button id="theme-toggle" aria-label="Dark/Light Mode umschalten">☀️</button>
+            <button id="mobile-menu-toggle" aria-label="Menü öffnen/schließen" class="hidden-desktop">
+                <i class="fas fa-bars"></i>
+            </button>
         </nav>
     </header>
 
     <main id="content">
-        <section id="hero">
-            <h1>Willkommen zur Projektdokumentation</h1>
-            <p>Entdecken Sie die Fortschritte und Features unseres Projekts.</p>
+        <section id="home-section" class="active-section">
+            <div class="hero">
+                <h1>Willkommen zur umfassenden Projektdokumentation!</h1>
+                <p>Entdecken Sie die Fortschritte und Features unseres bahnbrechenden Projekts – von KI bis zum Gaming Center.</p>
+                <div class="call-to-actions">
+                    <a href="#features" class="btn primary-btn">Alle Features entdecken</a>
+                    <a href="#development" class="btn secondary-btn">Unser Entwicklungsplan</a>
+                </div>
+            </div>
+            <div id="weather-info" class="card">
+                <h3>Aktuelles Wetter</h3>
+                <p>Wird geladen...</p>
+            </div>
         </section>
-        </main>
+
+        <section id="features-section" class="hidden-section">
+            <h2>✨ Unsere Kernfeatures</h2>
+            <p>Ein tiefer Einblick in die Leistungsfähigkeit unseres Projekts.</p>
+
+            <div class="tabs">
+                <div class="tab-header">
+                    <button class="tab-button active" data-tab="ai-tab">🧠 KI-Integration</button>
+                    <button class="tab-button" data-tab="design-tab">🎨 Design & UX</button>
+                    <button class="tab-button" data-tab="tech-tab">🔧 Technische Features</button>
+                </div>
+                <div class="tab-content">
+                    <div id="ai-tab" class="tab-pane active">
+                        <h3>KI-Assistent & Intelligente Suche</h3>
+                        <p>Ein interaktiver Assistent, der Ihnen hilft, die Dokumentation zu durchsuchen und automatisierte Inhaltsvorschläge basierend auf Ihrem Leseverhalten macht. Unsere intelligente Suche versteht den Kontext Ihrer Fragen.</p>
+                        <h4>Beispiele:</h4>
+                        <ul>
+                            <li>Kontextbezogene Hilfe im Chat.</li>
+                            <li>Semantische Suchergebnisse für Code-Beispiele.</li>
+                            <li>Vorschläge für verwandte Artikel.</li>
+                        </ul>
+                    </div>
+                    <div id="design-tab" class="tab-pane">
+                        <h3>Responsive, Moderne & Barrierefreie UI/UX</h3>
+                        <p>Genießen Sie eine nahtlose Benutzererfahrung auf jedem Gerät. Mit einem modernen und intuitiven Design, inklusive Dark/Light Mode, stellen wir sicher, dass unsere Dokumentation für jeden zugänglich ist.</p>
+                        <h4>Highlights:</h4>
+                        <ul>
+                            <li>Optimiert für Desktop, Tablet und Mobile.</li>
+                            <li>Anpassbarer Dark/Light Mode.</li>
+                            <li>WCAG 2.1 AA konform für höchste Barrierefreiheit.</li>
+                        </ul>
+                    </div>
+                    <div id="tech-tab" class="tab-pane">
+                        <h3>Robuste technische Basis</h3>
+                        <p>Effizientes Cookie-Management für Ihre Präferenzen und ein innovatives Tab-System für eine verbesserte Navigation zwischen verschiedenen Bereichen.</p>
+                        <h4>Technische Details:</h4>
+                        <ul>
+                            <li>Gezieltes Cookie-Management für Benutzereinstellungen (Theme, Sprache, Tabs).</li>
+                            <li>In-App Tab-Management zur Organisation Ihrer Ansichten.</li>
+                            <li>Optimierte Ladezeiten und Performance durch Code-Splitting und Caching.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="development-section" class="hidden-section">
+            <h2>⚙️ Unser Entwicklungsplan</h2>
+            <p>Transparenz ist uns wichtig. Hier sehen Sie, wie wir unser Projekt in 7 Tagen aufbauen.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Phase 1 (Tag 1-2): Grundstruktur</h3>
+                    <ul>
+                        <li>✅ Projekt-Setup & Architektur</li>
+                        <li>✅ Basis-Design System implementieren</li>
+                        <li>✅ Navigation und Routing</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>Phase 2 (Tag 3-4): Core Features</h3>
+                    <ul>
+                        <li>✅ KI-Integration entwickeln</li>
+                        <li>✅ Cookie-Management implementieren</li>
+                        <li>✅ Tab-System aufbauen</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>Phase 3 (Tag 5-6): Content & Design</h3>
+                    <ul>
+                        <li>✅ Multiple Startseiten erstellen</li>
+                        <li>✅ Wetter-API verbessern</li>
+                        <li>✅ Gaming Center Grundlagen</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>Phase 4 (Tag 7): Finalisierung</h3>
+                    <ul>
+                        <li>✅ Design-Verbesserungen</li>
+                        <li>✅ Testing und Optimierung</li>
+                        <li>✅ Deployment-Vorbereitung</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>🔄 Update-System (Geplant nach Launch)</h3>
+            <p>Nach dem Launch werden wir ein robustes Update-System implementieren:</p>
+            <ul>
+                <li>Automatische Update-Benachrichtigungen.</li>
+                <li>Integriertes Changelog für Versionskontrolle.</li>
+            </ul>
+        </section>
+
+        <section id="gaming-section" class="hidden-section">
+            <h2>🎮 Gaming Center</h2>
+            <p>Tauchen Sie ein in die Gaming-Welt unseres Projekts! Eine eigene Sektion für alles rund ums Spiel.</p>
+            <div class="tabs">
+                <div class="tab-header">
+                    <button class="tab-button active" data-tab="game-docs">📚 Dokumentation</button>
+                    <button class="tab-button" data-tab="game-tutorials">💡 Tutorials</button>
+                    <button class="tab-button" data-tab="game-performance">📊 Performance</button>
+                </div>
+                <div class="tab-content">
+                    <div id="game-docs" class="tab-pane active">
+                        <h3>Spielmechanik-Erklärungen</h3>
+                        <p>Verstehen Sie die Tiefe unserer Spielmechaniken, von Charakterklassen bis hin zu Item-Systemen und Balancing-Prinzipien.</p>
+                        <h4>Beispielthemen:</h4>
+                        <ul>
+                            <li>Kampfsystem-Details</li>
+                            <li>Ressourcenmanagement</li>
+                            <li>Wirtschafts-Simulation</li>
+                        </ul>
+                    </div>
+                    <div id="game-tutorials" class="tab-pane">
+                        <h3>Interaktive Tutorials</h3>
+                        <p>Lernen Sie das Spiel Schritt für Schritt mit unseren geführten Tutorials, inklusive Code-Snippets für Modder oder API-Integrationen.</p>
+                        <h4>Tutorial-Angebote:</h4>
+                        <ul>
+                            <li>Erste Schritte für Neulinge</li>
+                            <li>Fortgeschrittene Strategien</li>
+                            <li>Modding-Grundlagen</li>
+                        </ul>
+                    </div>
+                    <div id="game-performance" class="tab-pane">
+                        <h3>Performance-Metriken & Optimierung</h3>
+                        <p>Alles, was Sie über die Performance unseres Spiels wissen müssen, inklusive Benchmarks, Systemanforderungen und Tipps zur Optimierung Ihrer Erfahrung.</p>
+                        <h4>Metriken:</h4>
+                        <ul>
+                            <li>FPS-Benchmarks auf verschiedenen Systemen</li>
+                            <li>Netzwerklatenz-Analysen</li>
+                            <li>Empfohlene Hardware-Konfigurationen</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-section" class="hidden-section">
+            <h2>ℹ️ Über Uns</h2>
+            <p>Wir sind ein engagiertes Team, das leidenschaftlich daran arbeitet, innovative Lösungen zu entwickeln.</p>
+            <p>Unser Ziel ist es, Technologie für jedermann zugänglich und nützlich zu machen.</p>
+            <h3>Kontakt</h3>
+            <p>Haben Sie Fragen oder Feedback? Kontaktieren Sie uns unter <a href="mailto:info@projektxyz.com">info@projektxyz.com</a>.</p>
+        </section>
+    </main>
+
+    <div id="cookie-consent" class="cookie-bar hidden">
+        <p>Wir verwenden Cookies, um Ihre Benutzererfahrung zu verbessern. Durch die Nutzung unserer Website stimmen Sie dem zu. <a href="#privacy-policy">Mehr erfahren</a></p>
+        <button id="accept-cookies" class="btn primary-btn">Akzeptieren</button>
+        <button id="reject-cookies" class="btn secondary-btn">Ablehnen</button>
+    </div>
+
+    <div id="ai-chat-widget" class="ai-widget">
+        <button id="ai-toggle" aria-label="KI-Assistent öffnen">💬 KI</button>
+        <div id="ai-chat-box" class="hidden">
+            <div id="ai-messages"></div>
+            <input type="text" id="ai-input" placeholder="Stellen Sie Ihre Frage...">
+            <button id="ai-send">Senden</button>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2025 Projekt XYZ. Alle Rechte vorbehalten.</p>
     </footer>
 
-    <script src="js/main.js"></script>
-    <script src="js/theme.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
